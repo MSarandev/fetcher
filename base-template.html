@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-hover" id="myTable">
+    <thead>
+    <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Url</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{range $key, $value := .Links}}
+    <tr>
+        <td>{{$key}}</td>
+        <td>
+            <a href="{{$value.Url}}">{{$value}}</a>
+        </td>
+    </tr>
+    {{end}}
+
+    </tbody>
+</table>
+</body>
+</html>
